@@ -1,0 +1,8 @@
+viewer1,tx,private,false,false,false,false,true
+viewer2,tx,private,true,true,true,true,true
+viewer3,tx,shared,false,false,false,false,true
+viewer4,tx,shared,true,false,true,true,true
+viewer5,vm,private,true,true,true,false,true
+viewer6,vm,private,false,false,false,false,true
+viewer7,vm,private,false,false,false,false,true
+viewer12,horizon,shared,false,false,false,false,true

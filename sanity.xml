@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="skip">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<!--  
+ 	<test name="Boxilla Test" >
+		<classes>
+			<class name="testNG.test" />
+		</classes>
+	</test> 
+	
+	
+	<test name="System Admin">
+		<classes>
+			<class name="systemAdmin.SystemAdministration" />
+		</classes>
+	</test>-->
+	<test name="Parameters_REST">
+		<classes>
+			<class name="invisaPC.Rest.device.Connections" />
+			<class name="invisaPC.Rest.device.SystemProperties" />
+			<class name="invisaPC.Rest.device.SystemPropertiesDual" />
+		</classes>
+	</test>
+
+		<test name="InvisaPC REST">
+		<classes>
+			<class name="invisaPC.Rest.ActiveConnections" />
+			<class name="invisaPC.Rest.VideoFacts" />
+		</classes>
+	</test>
+	
+		<test name="Connections">
+		<classes>
+			<class name="connection.ForcedConnection" />
+		</classes>
+	</test>
+	
+	<test name="Discovery">
+		<classes>
+			<class name="device.DeviceDiscovery" />
+		</classes>
+	</test>
+	
+		<test name="Device">
+		<classes>
+			<class name="device.DeviceSettings" />
+			<class name="device.DeviceStatus" />
+			<class name="device.DeviceUpgrades" />
+		</classes>
+	</test>
+	
+	
+</suite>

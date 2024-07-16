@@ -1,0 +1,8 @@
+pairedTemplate1,false,1,H12,true,false,false,false
+pairedTemplate2,false,1,H12,true,true,false,false
+pairedTemplate3,false,1,H12,true,true,false,false
+pairedTempalte4,false,1,H12,true,true,false,false
+pairedTemplate5,false,2,H12,true,false,false,false
+pairedTemplate6,false,2,H21,false,false,false,false
+pairedTemplate7,false,2,V12,true,true,false,false
+pairedTemplate8,false,2,V21,false,false,false,false

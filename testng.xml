@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="continue">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="testNG.AnnotationTransformer" />
+		<listener class-name="testNG.FixRetryListener" />
+	</listeners>
+
+	 		<test name="Northbound API">
+	
+		<classes>
+			<class name="northbound.put.SetKvmReceiverProperties" />
+			<class name="northbound.put.SetKvmTransmitterProperties" />
+			<class name="northbound.delete.DeleteAllUsers" />
+			<class name="northbound.delete.DeleteUser" />
+			<class name="northbound.delete.DeleteConnection" />
+			<class name="northbound.delete.DeleteAllConnections" />
+			<class name="northbound.put.EditConnectionAssociations" />
+			<class name="northbound.put.EditKvmConnectionsPaired" />
+			<class name="northbound.put.EditKvmConnectionsViaTx" />
+			<class name="northbound.put.EditKvmConnectionVM" />
+			<class name="northbound.put.EditKvmConnectionVMHorizon" />
+			<class name="northbound.put.EditKvmUser" />
+			<class name="northbound.get.ApplianceProperties" />
+			<class name="northbound.get.ConnectionStatus" />
+			<class name="northbound.get.Users" />
+			<class name="northbound.get.Appliances" />
+			<class name="northbound.get.ApplianceStatus" />
+			<class name="northbound.get.Versioning" />
+			<class name="northbound.post.LaunchActiveConnection" />
+			<class name="northbound.delete.TerminateActiveConnection" />
+			<class name="northbound.post.CreateKvmConnections" />
+			<class name="northbound.post.CreateKvmUser" />
+			<class name="northbound.get.KvmActiveConnections" />
+	<class name="northbound.post.LoginUser" />
+	<class name="northbound.post.LogoutUser" />
+	<class name="northbound.post.RebootDevice" />
+			<class name="northbound.put.EditRestPassword" />
+			<class name="northbound.put.EditRestUsername" />
+		</classes>
+	</test> 
+	 
+	
+	<test name="Active Directory">
+	
+		<classes>
+			<class name="activeDirectory.ActiveDirectory" />
+		</classes>
+	</test>
+	
+	
+	<test name="Parameters_REST">
+	<groups>
+		<run>
+			<exclude name="noSE" /> 
+		</run>
+		</groups>
+		<classes>
+			<class name="invisaPC.Rest.device.BulkUpdateTemplate" />
+			<class name="invisaPC.Rest.device.BulkUpdateSystemProperties" />
+			<class name="invisaPC.Rest.device.Connections" />
+			<class name="invisaPC.Rest.device.SystemProperties" />
+			<class name="invisaPC.Rest.device.SystemPropertiesDual" />
+			<class name="invisaPC.Rest.device.Template" />
+			<class name="invisaPC.Rest.device.TemplateDual" />
+			<class name="invisaPC.Rest.device.Unique" />
+			<class name="invisaPC.Rest.device.UniqueDual" />
+			
+		</classes>
+	</test>
+
+		<test name="InvisaPC REST">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="invisaPC.Rest.ActiveConnections" />
+			
+			<class name="invisaPC.Rest.Alerts" />
+			<class name="invisaPC.Rest.AlertsTransmitter" />
+			<class name="invisaPC.Rest.Authentication" />
+			<class name="invisaPC.Rest.AuthenticationTransmitter" />
+			<class name="invisaPC.Rest.InvisaPcXmlCheck" />
+			<class name="invisaPC.Rest.InvisaTestBoardInformation" />
+			<class name="invisaPC.Rest.Version" />
+			<class name="invisaPC.Rest.SystemFacts" />
+			<class name="invisaPC.Rest.PreviousConnection" />
+			<class name="invisaPC.Rest.Process" />
+			<class name="invisaPC.Rest.HttpConnections" />
+		<!--  	<class name="invisaPC.Rest.UsbFacts" /> -->
+		</classes>
+	</test>
+	
+		<test name="Connections">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+		
+			<class name="connection.ActiveConnections" />
+			<class name="connection.AddConnectionTemplate" />
+			<class name="connection.AddConnection" />
+			<class name="connection.ConnectionsGroups" />
+			<class name="connection.DeleteConnectionTemplate" />
+			<class name="connection.ForcedConnection" />			
+		</classes>
+	</test>
+	
+	<test name="Discovery">
+	<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceDiscovery" />
+		</classes>
+	</test>
+	
+	
+		<test name="Users">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="user.AddUser" />
+			<class name="user.AddUserTemplate" />
+			<class name="user.DeleteUserTemplate" />
+			<class name="user.ManageUsers" />
+		</classes>
+	</test>
+	
+		
+	
+		<test name="Device">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceSettings" />
+			<class name="device.DeviceStatus" />
+		</classes>
+	</test>
+  
+
+
+		<test name="UnmanageDevice">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.Unmanage" />
+		</classes>
+	</test>
+	
+	<test name="cluster">
+		<classes>
+		<class name="activeStandby.ActiveStandby"></class>
+		</classes>
+	</test>
+	
+			
+	
+</suite>

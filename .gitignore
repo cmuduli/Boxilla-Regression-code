@@ -1,0 +1,18 @@
+resources/
+selenium/
+*.log
+lib/
+test-output - Copy/
+test-output/
+src/soak/.svn
+3.3.3_code/
+3.2_old/
+.svn/
+emeraldScripts/.svn/
+config_bak/
+3.3_code/
+emeraldScripts/
+src/soak/
+3.6/
+bin/
+

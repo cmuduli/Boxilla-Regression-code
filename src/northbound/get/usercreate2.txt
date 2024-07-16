@@ -1,0 +1,12 @@
+usercreateRest1,test,false,false,admin,true,createUserCon,true
+usercreateRest2,test,false,false,admin,true,createUserCon,false
+usercreateRest3,test,false,false,admin,false,,false
+usercreateRest4,test,false,false,admin,false,,true
+usercreateRest5,test,false,false,power,true,createUserCon,true
+usercreateRest6,test,false,false,power,true,createUserCon,false
+usercreateRest7,test,false,false,power,false,,false
+usercreateRest8,test,false,false,power,false,,true
+usercreateRest9,test,false,false,general,true,createUserCon,true
+usercreateRest10,test,false,false,general,true,createUserCon,false
+usercreateRest11,test,false,false,general,false,,false
+usercreateRest12,test,false,false,general,false,,true

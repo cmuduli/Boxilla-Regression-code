@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="continue">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="testNG.AnnotationTransformer" />
+		<listener class-name="testNG.FixRetryListener" />
+	</listeners>
+
+	 		<test name="Northbound API">
+	
+		<classes>
+			
+	<class name="northbound.post.LoginUser" />
+	<class name="northbound.post.LogoutUser" />
+	<class name="northbound.post.RebootDevice" />
+
+		</classes>
+	</test> 
+	 
+	
+	<test name="Active Directory">
+	
+		<classes>
+			<class name="activeDirectory.ActiveDirectory" />
+		</classes>
+	</test>
+	
+	
+	
+	
+		<test name="Connections">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="connection.ActiveConnections" />
+			<class name="connection.AddConnectionTemplate" />
+			<class name="connection.AddConnection" />
+			<class name="connection.DeleteConnectionTemplate" />
+			<class name="connection.ForcedConnection" />			
+		</classes>
+	</test>
+	
+	<test name="Discovery">
+	<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceDiscovery" />
+		</classes>
+	</test>
+	
+
+	
+		<test name="Users">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="user.AddUser" />
+			<class name="user.AddUserTemplate" />
+			<class name="user.DeleteUserTemplate" />
+			<class name="user.ManageUsers" />
+		</classes>
+	</test>
+	
+		
+	
+		<test name="Device">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceSettings" />
+			<class name="device.DeviceStatus" />
+		</classes>
+	</test>
+  
+
+
+		<test name="UnmanageDevice">
+		<groups>
+		<run>
+			<exclude name="noSE" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.Unmanage" />
+		</classes>
+	</test>
+	
+			
+	
+</suite>

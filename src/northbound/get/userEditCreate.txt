@@ -1,0 +1,12 @@
+userEdit1,test,false,false,admin,true,userGet,true
+userEdit2,test,false,false,admin,true,userGet,false
+userEdit3,test,false,false,admin,false,,false
+userEdit4,test,false,false,admin,false,,true
+userEdit5,test,false,false,power,true,userGet,true
+userEdit6,test,false,false,power,true,userGet,false
+userEdit7,test,false,false,power,false,,false
+userEdit8,test,false,false,power,false,,true
+userEdit9,test,false,false,general,true,userGet,true
+userEdit10,test,false,false,general,true,userGet,false
+userEdit11,test,false,false,general,false,,false
+userEdit12,test,false,false,general,false,,true

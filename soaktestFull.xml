@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SeleniumAutomation" verbose="1" configfailurepolicy="continue">
+	<parameter name="browser" value="Firefox" />
+	<parameter name="release1" value="bxa_3.4.1.5114.bbx"/>
+	<parameter name="release2" value="bxa_3.3.3.4897.bbx" />
+	<parameter name="runFullSetUp" value="false" />
+
+	<!-- <parameter name="browser" value="${browser}" />
+	<parameter name="release1" value="${release1}" />
+	<parameter name="release2" value="${release2}" /> -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+  
+  
+  
+  <!-- 
+  	<test name="Add Delete User" >
+	<method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                <![CDATA[
+                if(testngMethod.getMethodName().contains("addDeleteUser")) {
+                testngMethod.setInvocationCount(20);
+                }
+                return true;
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+		<classes>
+			
+			<class name="soak.AddDeleteUserAdminAutoConnectOff" />
+			<class name="soak.AddDeleteUserAdminAutoConnectOn" />
+			<class name="soak.AddDeleteUserGeneralAutoConnectOff" />
+			<class name="soak.AddDeleteUserPowerAutoConnectOff" />
+			
+		</classes>
+	</test>
+  -->
+	
+		
+		
+						<test name="Switch Test" >
+	<method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                <![CDATA[
+                if(testngMethod.getMethodName().contains("makeBreakSharedPrivate")) {
+                testngMethod.setInvocationCount(1500);
+                }
+                return true;
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+		<classes>
+	
+			<class name="soak.ForcedConnectionSharedPrivate" />
+			
+		</classes>
+	</test>		
+	
+	
+</suite>

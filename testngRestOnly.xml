@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="skip">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="testNG.AnnotationTransformer" />
+		<listener class-name="testNG.FixRetryListener" />
+	</listeners>
+	<!--  
+ 	<test name="Boxilla Test" >
+		<classes>
+			<class name="testNG.test" />
+		</classes>
+	</test> 
+	
+	
+	<test name="System Admin">
+		<classes>
+			<class name="systemAdmin.SystemAdministration" />
+		</classes>
+	</test>-->
+	<test name="Parameters_REST">
+		<classes>
+			<class name="invisaPC.Rest.device.BulkUpdateSystemProperties" />
+			<class name="invisaPC.Rest.device.Connections" />
+		</classes>
+	</test>
+
+		<test name="InvisaPC REST">
+		<classes>
+			<class name="invisaPC.Rest.ActiveConnections" />
+			<class name="invisaPC.Rest.VideoFacts" />
+			<class name="invisaPC.Rest.Alerts" />
+			<class name="invisaPC.Rest.AlertsTransmitter" />
+			<class name="invisaPC.Rest.Authentication" />
+			<class name="invisaPC.Rest.AuthenticationTransmitter" />
+			<class name="invisaPC.Rest.InvisaPcXmlCheck" />
+			<class name="invisaPC.Rest.InvisaTestBoardInformation" />
+			<class name="invisaPC.Rest.Version" />
+			<class name="invisaPC.Rest.SystemFacts" />
+			<class name="invisaPC.Rest.UsbFacts" />
+			<class name="invisaPC.Rest.PreviousConnection" />
+			<class name="invisaPC.Rest.Process" />
+			<class name="invisaPC.Rest.HttpConnections" />
+		</classes>
+	</test>
+		
+	
+</suite>

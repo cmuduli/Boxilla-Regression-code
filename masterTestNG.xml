@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="continue">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="testNG.AnnotationTransformer" />
+		<listener class-name="testNG.FixRetryListener" />
+	</listeners>
+	<!--  
+ 	<test name="Boxilla Test" >
+		<classes>
+			<class name="testNG.test" />
+		</classes>
+	</test> 
+	
+	
+	<test name="System Admin">
+		<classes>
+			<class name="systemAdmin.SystemAdministration" />
+		</classes>
+	</test>-->
+	 <test name="Parameters_REST">
+
+		<classes>
+			<class name="invisaPC.Rest.device.BulkUpdateSystemProperties" />
+			<class name="invisaPC.Rest.device.BulkUpdateTemplate" />
+			<class name="invisaPC.Rest.device.ChangePropertySource" />
+			<class name="invisaPC.Rest.device.Connections" />
+			<class name="invisaPC.Rest.device.SystemPropertiesDual" />
+			<class name="invisaPC.Rest.device.SystemProperties" />
+			<class name="invisaPC.Rest.device.Template" />
+			<class name="invisaPC.Rest.device.TemplateDual" />
+			<class name="invisaPC.Rest.device.Unique" />
+			<class name="invisaPC.Rest.device.UniqueDual" />
+			
+
+		</classes>
+	</test> 
+
+		<test name="InvisaPC REST">
+		<classes>
+			<class name="invisaPC.Rest.ActiveConnections" />
+			<class name="invisaPC.Rest.VideoFacts" />
+			<class name="invisaPC.Rest.Alerts" />
+			<class name="invisaPC.Rest.AlertsTransmitter" />
+			<class name="invisaPC.Rest.Authentication" />
+			<class name="invisaPC.Rest.AuthenticationTransmitter" />
+			<class name="invisaPC.Rest.HttpConnections" />
+			<class name="invisaPC.Rest.PreviousConnection" />
+			<class name="invisaPC.Rest.Process" />
+			<class name="invisaPC.Rest.SystemFacts" />
+			<class name="invisaPC.Rest.UsbFacts" />
+			<class name="invisaPC.Rest.Version" />			
+		</classes>
+	</test>
+ 
+		<test name="Connections">
+		<classes>
+			<class name="connection.ActiveConnections" />
+			<class name="connection.AddConnection" />
+			<class name="connection.AddConnectionTemplate" />
+			<class name="connection.ConnectionFavourites" />
+			<class name="connection.ConnectionsGroups" />
+			<class name="connection.DeleteConnectionTemplate" />
+			<class name="connection.ForcedConnection" />
+			<class name="connection.VmConnections" />
+		</classes>
+	</test>
+	
+			<test name="Users">
+		<classes>
+			<class name="user.AddUser" />
+			<class name="user.AddUserTemplate" />
+			<class name="user.DeleteUserTemplate" />
+			<class name="user.ManageUsers" />
+		</classes>
+	</test>
+	
+	<test name="Discovery">
+		<classes>
+			<class name="device.DeviceDiscovery" />
+		</classes>
+	</test>
+	
+		<test name="Device">
+		<classes>
+			<class name="device.DeviceSettings" />
+			<class name="device.DeviceStatus" />
+			<class name="device.DeviceUpgrades" />
+		</classes>
+	</test>
+  
+				<test name="DKM">
+		<classes>
+			<class name="dkm.DKMAll" />
+		</classes>
+	</test>
+					<test name="Navair SSH">
+		<classes>
+			<class name="navair.ssh.ChrootJail" />
+		</classes>
+	</test>
+	
+					<test name="System">
+		<classes>
+			 <class name="system.SystemLicense" />
+			<class name="system.SystemSettings" />
+		</classes>
+	</test>
+	
+		<test name="UnmanageDevice">
+		<classes>
+			<class name="device.Unmanage" />
+		</classes>
+	</test>
+	
+	
+	
+</suite>

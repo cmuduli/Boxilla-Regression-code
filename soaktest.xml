@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SeleniumAutomation" verbose="1" configfailurepolicy="continue">
+	<parameter name="browser" value="Firefox" />
+	<parameter name="release1" value="bxa_1.1.0.2518.bbx"/>
+	<parameter name="release2" value="boxillaupgrade_1.0.1.1916.bbx" />
+	<parameter name="runFullSetUp" value="false" />
+
+	<!-- <parameter name="browser" value="${browser}" />
+	<parameter name="release1" value="${release1}" />
+	<parameter name="release2" value="${release2}" /> -->
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<!--
+		<test name="BoxillaIpChange" >
+	<method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                <![CDATA[
+                if(testngMethod.getMethodName().contains("boxillaIPChange")) {
+                testngMethod.setInvocationCount(100);
+                }
+                return true;
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+		<classes>
+			<class name="soak.BoxillaIPChange" />
+		</classes>
+	</test>
+	
+			<test name="BoxillaUpgrade" >
+	<method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                <![CDATA[
+                if(testngMethod.getMethodName().contains("versionUpgrade")) {
+                testngMethod.setInvocationCount(100);
+                }
+                return true;
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+		<classes>
+			<class name="soak.BoxillaUpgrade" />
+		</classes>
+	</test>
+	-->
+	
+	<test name="rest" >
+	<method-selectors>
+            <method-selector>
+                <script language="beanshell">
+                <![CDATA[
+                if(testngMethod.getMethodName().contains("test01_forceConnectionPrivate")) {
+                testngMethod.setInvocationCount(3000);
+                }
+                return true;
+                ]]>
+                </script>
+            </method-selector>
+        </method-selectors>
+		<classes>
+			<class name="invisaPC.Rest.device.Connections" />
+		</classes>
+	</test>
+		
+	
+	
+</suite>

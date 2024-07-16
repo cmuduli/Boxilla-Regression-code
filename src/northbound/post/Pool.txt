@@ -1,0 +1,8 @@
+pool1,Yes,Yes,Yes,Yes
+pool2,No,Yes,Yes,Yes
+pool3,No,No,Yes,Yes
+pool4,No,No,No,Yes
+pool5,No,No,No,No
+pool6,Yes,No,No,No
+pool7,Yes,Yes,No,No
+pool8,Yes,Yes,Yes,No

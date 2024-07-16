@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ <suite name="SeleniumAutomation" verbose="1" configfailurepolicy="skip">
+<!--	<parameter name="release" value="2445" />
+	<parameter name="browser" value="Firefox" /> -->
+	
+	<parameter name="release" value="${release}" />
+	<parameter name="browser" value="${browser}" />
+	<parameter name="runFullSetUp" value="false" />
+	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<!--  
+ 	<test name="Boxilla Test" >
+		<classes>
+			<class name="testNG.test" />
+		</classes>
+	</test> 
+	
+	
+	<test name="System Admin">
+		<classes>
+			<class name="systemAdmin.SystemAdministration" />
+		</classes>
+	</test>-->
+	<test name="Parameters_REST">
+						<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="invisaPC.Rest.device.BulkUpdateTemplate" />
+			<class name="invisaPC.Rest.device.ChangePropertySource" />
+			<class name="invisaPC.Rest.device.BulkUpdateSystemProperties" />
+			<class name="invisaPC.Rest.device.Connections" />
+			<class name="invisaPC.Rest.device.SystemProperties" />
+			<class name="invisaPC.Rest.device.SystemPropertiesDual" />
+			<class name="invisaPC.Rest.device.Template" />
+			<class name="invisaPC.Rest.device.TemplateDual" />
+			<class name="invisaPC.Rest.device.Unique" />
+			<class name="invisaPC.Rest.device.UniqueDual" />
+		</classes>
+	</test>
+
+		<test name="InvisaPC REST">
+								<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="invisaPC.Rest.ActiveConnections" />
+			<class name="invisaPC.Rest.VideoFacts" />
+			<class name="invisaPC.Rest.Alerts" />
+			<class name="invisaPC.Rest.AlertsTransmitter" />
+			<class name="invisaPC.Rest.Authentication" />
+			<class name="invisaPC.Rest.AuthenticationTransmitter" />
+			<class name="invisaPC.Rest.InvisaPcXmlCheck" />
+			<class name="invisaPC.Rest.InvisaTestBoardInformation" />
+			<class name="invisaPC.Rest.Version" />
+			<class name="invisaPC.Rest.SystemFacts" />
+			<class name="invisaPC.Rest.UsbFacts" />
+			<class name="invisaPC.Rest.PreviousConnection" />
+			<class name="invisaPC.Rest.Process" />
+		</classes>
+	</test>
+	
+		<test name="Connections">
+								<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="connection.ActiveConnections" />
+			<class name="connection.AddConnectionTemplate" />
+			<class name="connection.AddConnection" />
+			<class name="connection.ConnectionsGroups" />
+			<class name="connection.DeleteConnectionTemplate" />
+			<class name="connection.ForcedConnection" />
+		</classes>
+	</test>
+		<test name="Users">
+								<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="user.AddUser" />
+			<class name="user.AddUserTemplate" />
+			<class name="user.DeleteUserTemplate" />
+			<class name="user.ManageUsers" />
+		</classes>
+	</test>
+	
+	<test name="Discovery">
+							<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceDiscovery" />
+		</classes>
+	</test>
+	
+		<test name="Device">
+								<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="device.DeviceSettings" />
+			<class name="device.DeviceStatus" />
+			<class name="device.DeviceUpgrades" />
+		</classes>
+	</test>
+	
+			<test name="System">
+									<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+
+		<classes><!--  
+			<class name="system.BoxillaReplacement" />-->
+			<class name="system.SystemLicense" />
+			<class name="system.SystemSettings" />
+		</classes>
+	</test>
+				<test name="DKM">
+										<groups>
+		<run>
+			<include name="chrome" />
+		</run>
+		</groups>
+		<classes>
+			<class name="dkm.DKMAll" />
+		</classes>
+	</test>
+	
+	
+</suite>

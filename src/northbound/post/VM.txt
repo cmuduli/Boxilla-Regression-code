@@ -1,0 +1,10 @@
+vm1,Yes,Yes,Yes,Yes,Yes
+vm2,No,Yes,Yes,Yes,Yes
+vm3,No,No,Yes,Yes,Yes
+vm4,No,No,No,Yes,Yes
+vm5,No,No,No,No,Yes
+vm6,No,No,No,No,No
+vm7,Yes,No,No,No,No
+vm8,Yes,Yes,No,No,No
+vm9,Yes,Yes,Yes,No,No
+vm10,Yes,Yes,Yes,Yes,No

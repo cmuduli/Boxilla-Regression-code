@@ -1,0 +1,6 @@
+viewOnly1,tx,private,true,true,true,true,true
+viewOnly2,tx,private,false,false,false,false,true
+viewOnly3,tx,shared,true,false,true,true,true
+viewOnly4,tx,shared,false,false,false,false,true
+viewOnly5,vm,private,true,true,true,true,true
+viewOnly6,vm,private,false,false,false,false,true

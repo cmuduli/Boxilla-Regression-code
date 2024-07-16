@@ -1,0 +1,16 @@
+paired1,1,Private,No,,Yes,Yes
+paired2,1,Private,No,,Yes,No
+paired3,1,Private,No,,No,No
+paired4,1,Private,No,,No,Yes
+paired5,1,Private,Yes,1,Yes,Yes
+paired6,1,Private,Yes,1,Yes,No
+paired7,1,Private,Yes,1,No,No
+paired8,1,Private,Yes,1,No,Yes
+paired9,1,Shared,No,,Yes,Yes
+paired10,1,Shared,No,,Yes,No
+paired11,1,Shared,No,,No,No
+paired12,1,Shared,No,,No,Yes
+paired13,1,Shared,Yes,1,Yes,Yes
+paired14,1,Shared,Yes,1,Yes,No
+paired15,1,Shared,Yes,1,No,No
+paired16,1,Shared,Yes,1,No,Yes

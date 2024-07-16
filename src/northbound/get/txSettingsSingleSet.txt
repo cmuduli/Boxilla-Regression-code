@@ -1,0 +1,25 @@
+Default,Off,0,0,1920x1080
+Best Quality,Off,0,0,1920x1080
+Best Compression,Off,0,0,1920x1080
+2,Off,0,0,1920x1080
+4,Off,0,0,1920x1080
+Default,DVI/DP Optimised,0,0,1920x1080
+Default,VGA - High Performance,0,0,1920x1080
+Default,VGA - Optimised,0,0,1920x1080
+Default,VGA - Low Bandwidth,0,0,1920x1080
+Default,DVI/DP Optimised,0,0,1920x1080
+Default,Off,0,0,1920x1080
+Default,Off,1,0,1920x1080
+Default,Off,2,0,1920x1080
+Default,Off,3,0,1920x1080
+Default,Off,4,0,1920x1080
+Default,Off,0,1,1920x1080
+Default,Off,0,2,1920x1080
+Default,Off,0,3,1920x1080
+Default,Off,0,4,1920x1080
+Default,Off,0,5,1920x1080
+Default,Off,0,0,1920x1080
+Default,Off,0,0,1680x1050
+Default,Off,0,0,1920x1200
+Default,Off,0,0,1280x1024
+Default,Off,0,0,1024x768

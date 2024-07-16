@@ -1,0 +1,15 @@
+0,0,Default
+1,0,Default
+2,0,Default
+3,0,Default
+4,0,Default
+0,1,Default
+0,2,Default
+0,3,Default
+0,4,Default
+0,5,Default
+0,0,Default
+0,0,3840x2160p-60Hz
+0,0,3840x2160p-30Hz
+0,0,2560x1440p-60Hz
+0,0,1920x1080p-60Hz

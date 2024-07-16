@@ -1,0 +1,9 @@
+,ConnectViaTx,Private,1.1.1.1,Yes,Yes,Yes,Yes,Yes,name
+empty1,,Private,1.1.1.1,Yes,Yes,Yes,Yes,Yes,group
+empty2,ConnectViaTx,,1.1.1.1,Yes,Yes,Yes,Yes,Yes,connection_type
+empty3,ConnectViaTx,Private,,Yes,Yes,Yes,Yes,Yes,host
+empty4,ConnectViaTx,Private,1.1.1.1,,Yes,Yes,Yes,Yes,audio
+empty4,ConnectViaTx,Private,1.1.1.1,Yes,,Yes,Yes,Yes,extended_desktop
+empty4,ConnectViaTx,Private,1.1.1.1,Yes,Yes,,Yes,Yes,persistent
+empty4,ConnectViaTx,Private,1.1.1.1,Yes,Yes,Yes,,Yes,view_only
+empty4,ConnectViaTx,Private,1.1.1.1,Yes,Yes,Yes,Yes,,usb_redirection
