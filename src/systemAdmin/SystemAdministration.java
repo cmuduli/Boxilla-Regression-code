@@ -25,7 +25,7 @@ import objects.Users;
 import system.SystemSettings;
 import testNG.Utilities;
 
-public class SystemAdministration extends StartupTestCase2 {
+public class SystemAdministration extends StartupTestCase {
 
 	public String timeStamp, customBackup, boxillaManager;
 	private SystemMethods methods = new SystemMethods();
@@ -133,7 +133,7 @@ public class SystemAdministration extends StartupTestCase2 {
 		log.info("Test case-7-Reset Certs to Default");
 		resetCerts(driver);
 	}
-//	@Test(priority=8)
+	@Test(priority=8)
 	public void test08_checkPasswordSequance() throws InterruptedException 
 	{
 		log.info("Test case-8-Check the password sequences by gving input as 12345");
