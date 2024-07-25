@@ -10,7 +10,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -132,10 +134,12 @@ public class SystemAdministration extends StartupTestCase {
 	{
 		log.info("Test case-7-Reset Certs to Default");
 		resetCerts(driver);
+		Thread.sleep(10000);
 	}
 	@Test(priority=8)
 	public void test08_checkPasswordSequance() throws InterruptedException 
 	{
+		Thread.sleep(10000);
 		log.info("Test case-8-Check the password sequences by gving input as 12345");
 		checkpasswordsequence(driver, "boxillauser1");
 		log.info("Password does not accept the character sequence.");
@@ -185,12 +189,13 @@ public class SystemAdministration extends StartupTestCase {
 		SystemAll.certificates(driver).click();
 		methods.timer(driver);
 		SystemAll.resetcert(driver).click();
-		int i=0;
-		while (Landingpage.spinner(driver).isDisplayed() && i < 50) {
-			Thread.sleep(2000);
-			log.info(i + " Upgrading in Progress....");
-			i++;
-		} 
+		new WebDriverWait(driver,120).until(ExpectedConditions.invisibilityOf(Landingpage.spinner(driver)));
+//		int i=0;
+//		while (Landingpage.spinner(driver).isDisplayed() && i < 50) {
+//			Thread.sleep(2000);
+//			log.info(i + " Upgrading in Progress....");
+//			i++;
+//		} 
 		String successmsg=SystemAll.getActiveDirectoryToast(driver).getText();
 		Assert.assertTrue(successmsg.contains("Successfully reset certificates to default."), "Did not contain the success message, Actual: "+ successmsg );
 		

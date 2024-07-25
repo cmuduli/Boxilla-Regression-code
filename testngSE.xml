@@ -223,7 +223,7 @@
 		</groups>
 		<classes>
 			<class name="systemAdmin.SystemAdministration" />
-			<!-- <class name="systemAdmin.RestoreBackup" /> -->
+			 <class name="systemAdmin.RestoreBackup" />
 
 		</classes>
 	</test>

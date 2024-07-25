@@ -140,7 +140,7 @@ public class DeviceDiscovery extends StartupTestCase {
 			i++;
 		}
 		String notificationMessage = Users.notificationMessage(driver).getText();
-		Assert.assertTrue(notificationMessage.contains("Unable to Ping"),
+		Assert.assertTrue(notificationMessage.contains("Invalid ip"),
 				"Notification message did not contain: Error, actual text: " + notificationMessage);
 		log.info("Invalid IP Pinged and got the errro message");
 		

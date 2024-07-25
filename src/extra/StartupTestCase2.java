@@ -70,10 +70,10 @@ public class StartupTestCase2 extends RESTStatistics {
 	private String rex1Ip = "";
 	private String rex2Ip = "";
 	
-	private static boolean is4kCon = false;
+	private static boolean is4kCon = true;
 	public static boolean isManage = false;
 	public static boolean isUnmanage = false;
-	public static boolean isEmerald = false;
+	public static boolean isEmerald = true;
 	protected String deviceUserName, devicePassword;
 	public WebDriver driver;
 	public String boxillaManager;
