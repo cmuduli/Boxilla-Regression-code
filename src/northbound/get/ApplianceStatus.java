@@ -85,6 +85,7 @@ public class ApplianceStatus extends StartupTestCase {
 	
 	@Test
 	public void test01_receiverInConnection() throws InterruptedException {
+		
 		//check connection on REST 
 		ApplianceStatusConfig.GetStats stats = config.new GetStats();
 		stats.device_names = new String[1];
@@ -113,6 +114,7 @@ public class ApplianceStatus extends StartupTestCase {
 	
 	@Test
 	public void test02_transmitterInConnection() {
+		
 		ApplianceStatusConfig.GetStats stats = config.new GetStats();
 		stats.device_names = new String[1];
 		stats.device_names[0] = txEmerald.getDeviceName();
@@ -138,6 +140,7 @@ public class ApplianceStatus extends StartupTestCase {
 	
 	@Test
 	public void test03_getMultipleDevicesInConnection() {
+		
 		ApplianceStatusConfig.GetStats stats = config.new GetStats();
 		stats.device_names = new String[2];
 		stats.device_names[0] = txEmerald.getDeviceName();

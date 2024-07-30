@@ -837,10 +837,11 @@ public class UsersMethods {
 		Users.btnSaveConnection(driver).click();
 		;
 		log.info("Save Connection Button Clicked");
-		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(Users.notificationMessage(driver)));
+		new WebDriverWait(driver,120).until(ExpectedConditions.invisibilityOf(Landingpage.spinner(driver)));
+//		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(Users.notificationMessage(driver)));
 
 		String toastMessage = Users.notificationMessage(driver).getText();
-		Assert.assertTrue(toastMessage.contains("Successfully edited user connections"),
+		Assert.assertTrue(toastMessage.contains("Successfully edited user connections."),
 				"Notification message did not contain: Successfully edited user connections, actual text: " + toastMessage);
 		log.info("Connection Added Successfully");
 	}

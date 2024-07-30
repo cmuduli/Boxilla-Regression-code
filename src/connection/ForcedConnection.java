@@ -33,7 +33,7 @@ import testNG.Utilities;
  *
  */
 // make it Startuptestcase after manual Executiob
-public class ForcedConnection extends StartupTestCase {
+public class ForcedConnection extends StartupTestCase2 {
 
 	final static Logger log = Logger.getLogger(ForcedConnection.class);
 	private ConnectionsMethods connections = new ConnectionsMethods();
@@ -342,7 +342,7 @@ public class ForcedConnection extends StartupTestCase {
 	 * 
 	 * @throws InterruptedException
 	 */
-	// @Test(groups = {"boxillaFunctional", "integration", "emerald", "notEmerald"})
+//	 @Test(groups = {"boxillaFunctional", "integration", "emerald", "notEmerald"})
 	public void test11_applyFullPreset() throws InterruptedException {
 		// create preset
 		String[] sourceList = { privateConnectionName };

@@ -94,9 +94,9 @@ public class StartupTestCase extends RESTStatistics{
 	
 	public static String northboundVersion = "";
 	private String boxillaBuild;
-	public static boolean isEmerald = true;
+	public static boolean isEmerald = false;
 	public static boolean isEmeraldSe  = false;
-	public static boolean isZeroU = false;
+	public static boolean isZeroU = true;
 	public static String deviceUserName, devicePassword;
 	public WebDriver driver;
 	public String boxillaManager;

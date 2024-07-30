@@ -23,6 +23,7 @@ public class DashBoard extends StartupTestCase {
 	
 	
 	// Test that will veryfy the Boxilla Icon presence 
+	
 	@Test(groups= {"boxillaFunctional", "smoke", "emerald", "chrome" })
 	public void test01_verifyIcon() 
 	{
@@ -35,6 +36,7 @@ public class DashBoard extends StartupTestCase {
 		
 	}
 	// Test that will verify the LaunchIcon
+	
 	@Test(groups= {"boxillaFunctional", "smoke", "emerald", "chrome" })
 	public void test02_VerifyLaunchIcon() throws InterruptedException 
 	{
@@ -49,13 +51,13 @@ public class DashBoard extends StartupTestCase {
 			Thread.sleep(5000);
 			String currentURL=driver.getCurrentUrl();
 			log.info("Current URL is: "+ currentURL);
-			Assert.assertTrue(currentURL.contains("10.231.128.72"),"Current window dose not contain the URL Actual: "+currentURL);
+			Assert.assertTrue(currentURL.contains("https://" + boxillaManager + "/"),"Current window dose not contain the URL Actual: "+currentURL);
 			log.info("Sucessfully the Boxilla in launched in another tab ");
-			driver.close();
-//			driver.switchTo().window(currentWindowHandle);
+			
 			
 		}
 	}
+	
 	@Test(groups= {"boxillaFunctional", "smoke", "emerald", "chrome" })
 	public void test03_verifyNotification() throws InterruptedException 
 	{

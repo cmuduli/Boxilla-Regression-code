@@ -34,7 +34,7 @@
 		</classes>
 	</test>
 
-	<!-- <test name="Bonding">
+	 <test name="Bonding">
 		<groups>
 			<run>
 				<exclude name="noSE" />
@@ -45,7 +45,7 @@
 			<class name="bonding.BondedReceivers" />
 			<class name="bonding.BondedConnection" />
 		</classes>
-	</test> -->
+	</test> 
 
 	<test name="Northbound API">
 

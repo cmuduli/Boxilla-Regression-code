@@ -21,7 +21,7 @@ import northbound.get.BoxillaHeaders;
 import northbound.post.config.CreateKvmConnectionsConfig;
 import northbound.post.config.CreateKvmConnectionsConfig.CreateConnection;
 
-public class ConnectionToUser extends StartupTestCase {
+public class ConnectionToUser extends StartupTestCase2 {
 	
 	private SystemMethods methods = new SystemMethods();
 	private ConnectionsMethods connectionMethods = new ConnectionsMethods();
