@@ -68,6 +68,7 @@
 			<class name="northbound.get.Appliances" />
 			<class name="northbound.get.ApplianceStatus" />
 			<class name="northbound.get.Versioning" />
+			<class name="northbound.get.PresetConnection" />
 			<class name="northbound.post.LaunchActiveConnection" />
 			<class name="northbound.delete.TerminateActiveConnection" />
 			<class name="northbound.post.CreateKvmConnections" />

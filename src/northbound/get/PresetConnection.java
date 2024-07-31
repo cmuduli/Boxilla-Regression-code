@@ -53,8 +53,13 @@ public class PresetConnection extends StartupTestCase {
 
 	}
 
+	/*
+	 * This test will get the Empty PresetConnection
+	 * 
+	 */
+
 	@Test(priority = 1)
-	public void test01_emptyPresetConnection() {
+	public void test01_GetemptyPresetConnection() {
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
@@ -66,8 +71,13 @@ public class PresetConnection extends StartupTestCase {
 
 	}
 
+	/*
+	 * This test will get the PresetConnection private
+	 * 
+	 */
+
 	@Test(priority = 2)
-	public void test02_CreatePresetConnection_Private() throws InterruptedException {
+	public void test02_GetPresetConnection_Private() throws InterruptedException {
 
 		String[] sourceList = { privateConnectionName };
 		String[] destinationList = { singleRxName };
@@ -76,20 +86,22 @@ public class PresetConnection extends StartupTestCase {
 				+ " is displayed");
 		Assert.assertTrue(Connections.getPresetBtn(driver, presetName).isDisplayed(),
 				"Button with preset name is not displayed, button name : " + presetName);
-		RestAssured.useRelaxedHTTPSValidation();
-		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+
 		Response respons = given().auth().preemptive().basic(boxillaRestUser, boxillaRestPassword)
 				.headers(BoxillaHeaders.getBoxillaHeaders()).when().contentType(ContentType.JSON)
 				.get(config.getUri(boxillaManager)).then().assertThat().statusCode(200)
 				.body(config.getPresetConnectionConnectionName(0), equalTo(presetName)).extract().response();
 		SaveResponseStatistics(config.getUri(boxillaManager), REQUEST_TYPE.GET, respons);
 
-		connections.deletePreset(driver, presetName);
-
 	}
 
+	/*
+	 * This test will get the PresetConnection Shared
+	 * 
+	 */
+
 	@Test(priority = 3)
-	public void test03_CreatePresetconnection_Shared() throws InterruptedException {
+	public void test03_GetPresetconnection_Shared() throws InterruptedException {
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
 		String[] connectionSources = { sharedConnectionName };
@@ -106,8 +118,40 @@ public class PresetConnection extends StartupTestCase {
 				.get(config.getUri(boxillaManager)).then().assertThat().statusCode(200)
 				.body(config.getPresetConnectionConnectionName(0), equalTo(presetNameShared)).extract().response();
 		SaveResponseStatistics(config.getUri(boxillaManager), REQUEST_TYPE.GET, respons);
-		connections.deletePreset(driver, presetNameShared);
 
 	}
 
+	/*
+	 * This test will get the Number of preset connection has been created
+	 * 
+	 */
+
+	@Test(priority = 4)
+	public void test04_GetMultiplePresetConnection() {
+		Response respons = given().auth().preemptive().basic(boxillaRestUser, boxillaRestPassword)
+				.headers(BoxillaHeaders.getBoxillaHeaders()).when().contentType(ContentType.JSON)
+				.get(config.getUri(boxillaManager)).then().assertThat().statusCode(200)
+				.body(config.getPresetConnectionConnectionName(0), equalTo(presetNameShared))
+				.body(config.getPresetConnectionConnectionName(1), equalTo(presetName)).extract().response();
+		SaveResponseStatistics(config.getUri(boxillaManager), REQUEST_TYPE.GET, respons);
+	}
+
+	@AfterClass
+	public void afterClass() {
+
+		try {
+
+			cleanUpLogin();
+			connections.deletePreset(driver, presetName);
+			connections.deletePreset(driver, presetNameShared);
+			cleanUpLogout();
+			super.afterClass();
+
+		} catch (Exception e) {
+			Utilities.captureScreenShot(driver, this.getClass().getName() + "_afterClass", "After Class");
+			e.printStackTrace();
+			cleanUpLogout();
+		}
+
+	}
 }
