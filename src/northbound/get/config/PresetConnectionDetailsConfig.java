@@ -14,7 +14,12 @@ public class PresetConnectionDetailsConfig {
 		return "message.presets[" + position + "].type";
  	}
 	
-	public String getPresetConnection(int position,int position2) {
-		return "message.data[" + position + "].source[" + position2 + "].connection_name";
+	public String getPresetConnectionName(int position,int position1 ) {
+		 return "message.presets[" + position + "].data[" + position1 + "].source.connection_name";
 	}
+	public String getPresetReciverName(int position,int position1,int position2) {
+		 return "message.presets[" + position + "].data[" + position1 + "].destinations[" + position2 + "]";
+	}
+	
+	
 }
